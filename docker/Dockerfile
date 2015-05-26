@@ -12,7 +12,8 @@ RUN \
   apt-get update && \
     apt-get install -y curl python python-dev python-pip python-virtualenv openssh-server && \
       apt-get install -y python-prettytable python-yaml && \
-        rm -rf /var/lib/apt/lists/*
+        apt-get install -y sshpass && \
+          rm -rf /var/lib/apt/lists/*
 
 # Set environment variable to Docker
 ENV CONTAINER DOCKER
